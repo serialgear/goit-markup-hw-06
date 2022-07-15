@@ -461,6 +461,94 @@
           </li>
         </ul>
       </section>
+      <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+          <button class="modal-close-btn" type="button" data-modal-close>
+            <svg class="modal-close-icon">
+              <use href="./images/symbol-defs.svg#icon-close"></use>
+            </svg>
+          </button>
+          <form class="form" name="data-transfer" autocomplete="on">
+            <strong class="form-title"
+              >Оставьте свои данные, мы вам перезвоним</strong
+            >
+            <div role="group" class="form-group-field">
+              <label class="form-label" for="user-name">Имя</label>
+              <div class="form-field">
+                <svg class="input-icon">
+                  <use href="./images/symbol-defs.svg#icon-person"></use>
+                </svg>
+                <input
+                  class="form-input"
+                  type="text"
+                  name="user-name"
+                  id="user-name"
+                  minlength="3"
+                  placeholder=" "
+                  required
+                  autofocus
+                />
+              </div>
+
+              <label class="form-label" for="user-phone">Телефон</label>
+              <div class="form-field">
+                <svg class="input-icon">
+                  <use href="./images/symbol-defs.svg#icon-phone"></use>
+                </svg>
+                <input
+                  class="form-input"
+                  type="tel"
+                  name="user-phone"
+                  id="user-phone"
+                  pattern="\+?[0-9\s\-\(\)]+"
+                  placeholder=" "
+                  required
+                />
+              </div>
+
+              <label class="form-label" for="user-email">Почта</label>
+              <div class="form-field">
+                <svg class="input-icon">
+                  <use href="./images/symbol-defs.svg#icon-emailsecond"></use>
+                </svg>
+                <input
+                  class="form-input"
+                  type="email"
+                  name="user-email"
+                  id="user-email"
+                  placeholder=" "
+                  required
+                />
+              </div>
+              <label class="form-label" for="user-notes">Комментарии</label>
+              <textarea
+                class="form-textarea"
+                name="user-notes"
+                id="user-notes"
+                rows="3"
+                placeholder="Введите текст"
+              ></textarea>
+            </div>
+            <label class="form-agreement-label">
+              <input
+                class="checkbox visually-hidden"
+                type="checkbox"
+                name="user-agreement"
+                required
+              />
+              Соглашаюсь с рассылкой и принимаю&nbsp;
+              <a class="form-agreement-link" href="#">Условия договора</a>
+              <svg class="form-agreement-icon-check">
+                <use href="./images/symbol-defs.svg#icon-checkbox"></use>
+              </svg>
+              <svg class="form-agreement-icon-checked">
+                <use href="./images/symbol-defs.svg#icon-checked"></use>
+              </svg>
+            </label>
+            <button class="form-submit-btn" type="submit">Отправить</button>
+          </form>
+        </div>
+      </div>
     </main>
     <footer class="footer">
       <div class="container">
@@ -540,18 +628,30 @@
               </li>
             </ul>
           </div>
+          <div class="footer-submit">
+            <strong class="footer-submit-title">ПОДПИШИТЕСЬ НА РАССЫЛКУ</strong>
+            <form class="submit" name="submit e-mail" autocomplete="on">
+              <label class="visually-hidden" for="submit-email">Почта</label>
+              <input
+                class="submit-input"
+                type="email"
+                name="submit-email"
+                id="submit-email"
+                placeholder="E-mail"
+                required=""
+              />
+              <button class="form-submit-btn" type="submit">
+                Подписаться
+                <svg class="form-submit-icon">
+                  <use href="./images/symbol-defs.svg#icon-send"></use>
+                </svg>
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </footer>
-    <div class="backdrop is-hidden" data-modal>
-      <div class="modal">
-        <button type="button" class="close-button" data-modal-close>
-          <svg class="close-icon" width="11" height="11">
-            <use href="./images//symbol-defs.svg#icon-close"></use>
-          </svg>
-        </button>
-      </div>
-      <script src="./js/modal.js"></script>
-    </div>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>

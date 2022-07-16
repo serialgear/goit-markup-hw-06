@@ -559,11 +559,10 @@ img {
 }
 
 .form-agreement-label {
-  position: relative;
   display: flex;
+  gap: 8px;
   align-items: center;
   margin-bottom: 30px;
-  padding-left: 24px;
 
   line-height: 1.71;
   letter-spacing: 0.03em;
@@ -576,39 +575,23 @@ img {
 }
 
 .form-agreement-icon-check {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-
   width: 16px;
   height: 15px;
   opacity: 1;
-
   transition: opacity var(--defaul-duration) var(--timing-function);
 }
-
-.checkbox:checked ~ .form-agreement-icon-check {
-  opacity: 0;
-}
-
-.form-agreement-icon-checked {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-
-  width: 16px;
-  height: 15px;
-  opacity: 0;
-
-  fill: var(--accent-color);
-
+.empty {
   transition: opacity var(--defaul-duration) var(--timing-function);
 }
-
-.checkbox:checked ~ .form-agreement-icon-checked {
+.checkbox:checked ~ .form-agreement-icon-check .empty {
+  opacity: 0;
+}
+.marked {
+  opacity: 0;
+}
+.checkbox:checked ~ .form-agreement-icon-check .marked {
   opacity: 1;
+  transition: opacity var(--defaul-duration) var(--timing-function);
 }
 
 .form-submit-btn {
@@ -663,8 +646,8 @@ img {
 
 .modal-close-icon {
   display: block;
-  width: 18px;
-  height: 18px;
+  width: 11px;
+  height: 11px;
   fill: currentColor;
 }
 

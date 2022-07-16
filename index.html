@@ -536,14 +536,23 @@
                 name="user-agreement"
                 required
               />
-              Соглашаюсь с рассылкой и принимаю&nbsp;
-              <a class="form-agreement-link" href="#">Условия договора</a>
               <svg class="form-agreement-icon-check">
-                <use href="./images/symbol-defs.svg#icon-checkbox"></use>
+                <use
+                  href="./images/symbol-defs.svg#icon-checkbox"
+                  class="empty"
+                ></use>
+                <use
+                  href="./images/symbol-defs.svg#icon-checked"
+                  class="marked"
+                ></use>
               </svg>
-              <svg class="form-agreement-icon-checked">
-                <use href="./images/symbol-defs.svg#icon-checked"></use>
-              </svg>
+              <span
+                >Соглашаюсь с рассылкой и принимаю&nbsp;<a
+                  class="form-agreement-link"
+                  href="#"
+                  >Условия договора</a
+                >
+              </span>
             </label>
             <button class="form-submit-btn" type="submit">Отправить</button>
           </form>

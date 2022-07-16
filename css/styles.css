@@ -593,7 +593,6 @@ img {
   opacity: 1;
   transition: opacity var(--defaul-duration) var(--timing-function);
 }
-
 .form-submit-btn {
   display: flex;
   align-items: center;
